@@ -1,5 +1,5 @@
-# FROM registry.access.redhat.com/ubi8/nodejs-10
-FROM node:lts-slim
+FROM registry.access.redhat.com/ubi8/nodejs-10
+# FROM node:lts-slim
 
 RUN mkdir app
 

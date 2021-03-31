@@ -25,6 +25,9 @@ import { UiShellComponent } from './ui-shell/ui-shell.component';
 import { DisplayFormComponent } from './display-form/display-form.component';
 import { HeaderComponent } from './header/header.component';
 import { TableListComponent } from './table-list/table-list.component';
+import { TitleComponent } from './components/title/title.component';
+import { ListComponent } from './components/list/list.component';
+import { CardComponent } from './components/list/card/card.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { TableListComponent } from './table-list/table-list.component';
     DisplayFormComponent,
     HeaderComponent,
     TableListComponent,
+    TitleComponent,
+    ListComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

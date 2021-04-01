@@ -23,7 +23,8 @@
     "pull": "./scripts/pull.sh $npm_package_org $npm_package_name $npm_package_version",
     "start:image": "docker run -p 3001:3000 $npm_package_name:$npm_package_version ",
     "test:coverage": "nyc --reporter=cobertura --reporter=lcov npm run test",
-    "sonarqube:scan": "npm run test:coverage && ts-node test/sonarqube-scan"
+    "sonarqube:scan": "npm run test:coverage && ts-node test/sonarqube-scan",
+    "tdd": "jest --verbose --watch --onlyChanged"
   },
   "author": "IBM Garage for Cloud",
   "license": "ISC",
@@ -35,18 +36,21 @@
     "express": "^4.15.3",
     "ibm-cloud-env": "^0",
     "log4js": "^3.0.5",
-    "tslib": "^1.10.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "pg": "^8.5.1",
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/node": "^11.13.19",
     "chai": "^4.0.0",
+    "jest": "^26.6.3",
     "mocha": "^5.2.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^1.12.1",
     "nyc": "^13.1.0",
-    "ts-node": "^8.1.0",
-    "typescript": "^3.4.4",
+    "sonarqube-scanner": "^2.5.0",
     "supertest": "^4.0.2",
-    "sonarqube-scanner": "^2.5.0"
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.4"
   }
 }

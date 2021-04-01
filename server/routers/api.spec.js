@@ -54,7 +54,7 @@ describe('DB tests', () => {
             headers: { 'Content-Type': 'application/json' },
         }).then(res => res.json())
         .then(json => {
-            expect(json).toStrictEqual({ err: false, msg: 'deletes' })
+            expect(json).toStrictEqual({ err: false, msg: 'deleted' })
         });
     });
 });

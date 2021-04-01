@@ -12,11 +12,11 @@ module.exports = function(app) {
     db.insert(req.body)
         .then(data => {
             console.log(data)
-            res.json({ err: false, msg: data.rows })
+            res.json({ err: false, msg: 'inserted' })
         })
         .catch(err => {
             console.error(err);
-            res.json({ err: true, msg: 'inserted' })
+            res.json({ err: true, msg: 'err' })
         });
     //   res.json({ err: false, msg: 'inserted' })
   });
@@ -35,11 +35,11 @@ module.exports = function(app) {
     db.delete(req.body)
         .then(data => {
             console.log(data)
-            res.json({ err: false, msg: data.rows })
+            res.json({ err: false, msg: 'deleted' })
         })
         .catch(err => {
             console.error(err);
-            res.json({ err: true, msg: 'deleted' })
+            res.json({ err: true, msg: 'err' })
         });
     //   res.json({ err: false, msg: 'deletes' })
   });

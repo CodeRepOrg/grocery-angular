@@ -24,7 +24,7 @@ exports.insert = async (query) => {
 
 exports.delete = async (query) => {
     const client = await pool.connect();
-    const result = await client.query(`remove from list where item='${query.item}' and quantidade=${query.quantidade} and unidade='${query.unidade}' and status='${query.status}' and nome='${query.nome}' and obs='${query.obs}')`);
+    const result = await client.query(`delete from list where item='${query.item}' and quantidade=${query.quantidade} and unidade='${query.unidade}' and status='${query.status}' and nome='${query.nome}' and obs='${query.obs}'`);
     client.release();
     return result;
 }

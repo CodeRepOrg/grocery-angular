@@ -1,0 +1,34 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    Item:
+    <input type="text" formControlName="item">
+  </label>
+
+  <label>
+    Quantidade:
+    <input type="text" formControlName="quantidade">
+  </label>
+
+  <label>
+    Obs
+    <input type="text" formControlName="obs">
+  </label>
+
+<select class="custom-select" (change)="changeUnidade($event)" formControlName="unidade">
+    <option value="" disabled>Unidade</option>
+    <option *ngFor="let unidade of unidade " [ngValue]="unidade">{{unidade}}</option>
+ </select>
+
+ <select class="custom-select" (change)="changeStatus($event)" formControlName="status">
+  <option value="" disabled>Status</option>
+  <option *ngFor="let status of status " [ngValue]="status">{{status}}</option>
+</select>
+
+<select class="custom-select" (change)="changeWho($event)" formControlName="who">
+  <option value="" disabled>Who</option>
+  <option *ngFor="let who of who " [ngValue]="who">{{who}}</option>
+</select>
+
+  <button type="submit" [disabled]="!profileForm.valid">Add Item</button>
+</form>

@@ -9,6 +9,9 @@ module.exports = function(app) {
   });
 
   router.post('/insert', (req, res) => {
+    console.log (req.body)
+
+
     db.insert(req.body)
         .then(data => {
             console.log(data)

@@ -9,7 +9,7 @@ export class CardComponent implements OnInit {
 
   constructor() { }
 
-  @Input() card: Object;
+  @Input() card: any;
 
   // card: Object = {
   //   item: 'popcorn',

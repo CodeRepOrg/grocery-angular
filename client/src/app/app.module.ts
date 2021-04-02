@@ -14,7 +14,7 @@
  * the License.
  */
 
-
+ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { UIShellModule, ButtonModule, StructuredListModule } from 'carbon-components-angular';
@@ -28,6 +28,11 @@ import { TableListComponent } from './table-list/table-list.component';
 import { TitleComponent } from './components/title/title.component';
 import { ListComponent } from './components/list/list.component';
 import { CardComponent } from './components/list/card/card.component';
+import { FormComponent } from './components/form/form.component';
+import {RequestService} from './service/request.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -39,14 +44,17 @@ import { CardComponent } from './components/list/card/card.component';
     TitleComponent,
     ListComponent,
     CardComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     UIShellModule,
     ButtonModule,
     StructuredListModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

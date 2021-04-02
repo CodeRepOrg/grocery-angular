@@ -1,8 +1,11 @@
 const { Pool } = require('pg');
 
+const host = process.env.NODE_ENV == 'production' ? '172.21.198.96':'169.60.200.83'
+const port = process.env.NODE_ENV == 'production' ? 5432:30410
+
 const pool = new Pool({
-    host: '169.60.200.83',
-    port: 30410,
+    host: host,
+    port: port,
     user: 'admin',
     password: 'admin',
     database: 'postgres'
